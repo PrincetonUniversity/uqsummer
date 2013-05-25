@@ -1,0 +1,103 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2797,         94]
+NotebookOptionsPosition[      2525,         80]
+NotebookOutlinePosition[      2862,         95]
+CellTagsIndexPosition[      2819,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Rho]", "[", "y_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       RowBox[{"Log", "[", 
+        RowBox[{"y", "-", "\[Mu]"}], "]"}], "^", "2"}]}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", 
+       RowBox[{"\[Sigma]", "^", "2"}]}], ")"}]}], "]"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"y", " ", "\[Sigma]", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"2", "\[Pi]"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", "Z_", "]"}], ":=", 
+  RowBox[{"Exp", "[", 
+   RowBox[{"\[Mu]", "+", 
+    RowBox[{"\[Sigma]", " ", "Z"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalPhi]", "[", 
+   RowBox[{"k_", ",", "Z_"}], "]"}], ":=", 
+  RowBox[{"HermiteH", "[", 
+   RowBox[{"k", ",", "Z"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"YN", "[", "X_", "]"}], ":=", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", "z", "]"}], 
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"k", ",", "z"}], "]"}], 
+        RowBox[{"\[Rho]", "[", 
+         RowBox[{"f", "[", "z", "]"}], "]"}]}], ",", "z"}], "]"}], " ", "/", 
+     " ", 
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[CapitalPhi]", "[", 
+          RowBox[{"k", ",", "z"}], "]"}], "^", "2"}], 
+        RowBox[{"\[Rho]", "[", 
+         RowBox[{"f", "[", "z", "]"}], "]"}]}], ",", "z"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "N"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"YN", "[", "X", "]"}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.57849441281262*^9, 3.578494590307067*^9}, {
+  3.5784946626027517`*^9, 3.5784949649438057`*^9}, {3.57849501028141*^9, 
+  3.57849505433617*^9}}],
+
+Cell[BoxData["s"], "Input",
+ CellChangeTimes->{3.5784950586747513`*^9}]
+},
+WindowSize->{740, 867},
+WindowMargins->{{139, Automatic}, {Automatic, 22}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1890, 55, 187, "Input"],
+Cell[2450, 77, 71, 1, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
