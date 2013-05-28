@@ -1,0 +1,11 @@
+http://www.youtube.com/watch?v=bizJWtJ0xXo&feature=youtube_gdata_player
+
+
+du/dt = a * (v - u)
+dv/dt = u * (b - w) - v
+dw/dt = u * v - c * w
+
+nominal parameter values:
+a = 10
+b = 4
+c = 2.6
